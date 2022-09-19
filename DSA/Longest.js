@@ -7,14 +7,17 @@ function longestRepeatedOdd(N, array) {
   for (let i = 0; i < arr.length - 1; i++) {
     j += 1;
     if (arr[i] == arr[j] && arr[i] % 2 == 1) {
-        count++; 
-    } else if(arr[i] % 2 == 1 && previous < count) {
-        previous = count;
-        count = 0;
+      count++;
+    } else if (arr[i] % 2 == 1 && previous < count) {
+      previous = count;
+      count = 1;
+    } else if (arr.length - 1 == j && arr[i] % 2 == 0 && count == 1) {
+      console.log(0);
+      return;
     }
   }
 
-  if(previous < count) {
+  if (previous < count) {
     previous = count;
   }
 

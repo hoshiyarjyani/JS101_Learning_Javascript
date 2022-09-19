@@ -11,3 +11,4 @@ console.log(arrLastIndex(animals, 'Dodo'));
 
 console.log(arrLastIndex(animals, 'Tiger'));
 // expected output: 1
+
