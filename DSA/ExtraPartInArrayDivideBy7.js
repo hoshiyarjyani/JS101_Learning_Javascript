@@ -9,22 +9,21 @@ function applyBasicMaths(N, A) {
     sum += A[i];
   }
 
-//Sum of all element is complete.
+  //Sum of all element is complete.
   let extra = sum % 7;
-  let flag = false;
-  for (var j = 0; j < N; j++) {
-    if(extra==A[j]){
-      flag = true;
-    }else if(extra==0 && A[j]%7==0){
-        flag = true;
+  let index = -1;
+  let value = Infinity;
+  for (let j = 0; j < N; j++) {
+    if (A[j] == extra  && value > A[j]) {
+      value = A[j];
+      index = j;
+    }else if(extra==0 && A[j]%7==0 && value > A[j]){
+      value = A[j];
+      index = j;
     }
   }
-  if (fla) {
-    console.log(j);
-  } else {
-    console.log(-1);
-  }
+  console.log(index);
 }
 
-A = [14, 9, 8, 2, 4];
+A = [14, 2, 47, 9, 5];
 applyBasicMaths(5, A);
