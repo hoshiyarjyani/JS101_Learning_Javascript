@@ -7,8 +7,8 @@ for (let i = 0; i < x.length; i++) {
     obj[x[i]]++;
   }
 }
-for (let j in obj) {
-  if (obj[j] == 1) {
-    console.log(j);
+for (let key in obj) {
+  if (obj[key] == 1) {
+    console.log(key);
   }
 }

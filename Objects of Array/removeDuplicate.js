@@ -7,6 +7,6 @@ for (let i = 0; i < x.length; i++) {
     obj[x[i]]++;
   }
 }
-for (let j in obj) {
-  console.log(j);
+for (let key in obj) {
+  console.log(key);
 }
