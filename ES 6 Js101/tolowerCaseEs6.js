@@ -9,7 +9,7 @@ let uprCase = [];
 lowercase = (arr) => {
   var beg = "";
   for (let i = 0; i < arr.length; i++) {
-    arr.charCodeAt(i) >= 65 && arr.charCodeAt(i) <= 97
+    arr.charCodeAt(i) >= 65 && arr.charCodeAt(i) <= 90
       ? (beg += String.fromCharCode(arr.charCodeAt(i) + 32))
       : null;
   }

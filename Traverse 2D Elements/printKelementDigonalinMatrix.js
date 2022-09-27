@@ -2,28 +2,28 @@ function specificDiagonals(R, C, matrix, K) {
   for (let i = 0; i < R; i++) {
     for (let j = 0; j < C; j++) {
       if (matrix[i][j] == K) {
-        r = i;
-        c = j;
+        var row = i;
+        var coulmn = j;
         break;
       }
     }
   }
-  let sum = r + c;
-  let diff = r - c;
-  let left = "";
-  let right = "";
+  let sum = row + coulmn;
+  let diff = row - coulmn;
+  let d1 = "";
+  let d2 = "";
   for (let i = 0; i < R; i++) {
     for (let j = 0; j < C; j++) {
       if (i - j == diff) {
-        left = left + matrix[i][j] + " ";
+        d1 += matrix[i][j] + " ";
       }
       if (i + j == sum) {
-        right = right + matrix[i][j] + " ";
+        d2 += matrix[i][j] + " ";
       }
     }
   }
-  console.log(left);
-  console.log(right);
+  console.log(d1);
+  console.log(d2);
 }
 
 let matrix = [
@@ -31,5 +31,5 @@ let matrix = [
   [4, 5, 6],
   [7, 8, 9],
 ];
-specificDiagonals(3,3,matrix,6);
-specificDiagonals(3,3,matrix,5);
+specificDiagonals(3, 3, matrix, 6);
+specificDiagonals(3, 3, matrix, 5);
