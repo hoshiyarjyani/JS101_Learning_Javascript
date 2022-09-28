@@ -5,9 +5,11 @@ function patternW(N) {
     for (let j = 0; j < 4 * N; j++) {
       if (j == i || j == 2 * N + i) {
         beg += "\\";
-      }
-      if (j == 2 * N - 1 - i || j == 4 * N - 1 - i) {
+      } else if (j == 2 * N - 1 - i) {
         beg += "/";
+      } else if (j == 4 * N - 1 - i) {
+        beg += "/";
+        break;
       } else {
         beg += " ";
       }
