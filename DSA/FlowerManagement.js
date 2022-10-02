@@ -69,17 +69,29 @@ function flowerManagement(N, K, flowerbed) {
       count1++;
     }
   }
-  if (count1 == 0) {
-    if (K == count0 - 1) {
+  console.log(count0, count1);
+  if (count1 == 0 && count0 !== 0) {
+    if (K == (count0 + 1) / 2 || K == count0 / 2) {
       console.log("Yes");
     } else {
       console.log("No");
     }
-  } else if (Math.abs(count1 - count0) == 1) {
-    console.log("Yes");
-  } else if (count1 != 0 && count0 != 0) {
+  } else if (count0 == count1) {
+    if (K == 0) {
+      console.log("Yes");
+    } else {
+      console.log("No");
+    }
+  } else if (Math.abs(count1 - count0) % 2 == 0) {
+    if (K == count0 / 2) {
+      console.log("Yes");
+    } else {
+      console.log("No");
+    }
+  } else {
     let x = Math.abs(count1 - count0);
-    if (x - 2 == K) {
+
+    if (K == Math.floor(x / 2) + 1) {
       console.log("Yes");
     } else {
       console.log("No");
